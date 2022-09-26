@@ -2,6 +2,20 @@ import pandas as pd
 import numpy as np
 
 
+def selRepsample(X,y):
+    X_samples,y_samples = [],[]
+    y_set = set(list(y))
+    for y_label in y_set:
+        for x_sample,y_sample in zip(X,y):
+            if y_sample == y_label:
+                X_samples.append(x_sample)
+                y_samples.append(y_sample)
+                break
+    return X_samples,y_samples
+
+
+
+
 def read_counts2tpm(df, sample_name):
     """
     convert read counts to TPM (transcripts per million)
@@ -40,6 +54,23 @@ def removeZerogene(X):
             new_X_t.append(gene)
     new_X_t = np.array(new_X_t)
     return np.transpose(new_X_t)
+
+def readData(filename):
+    df = pd.read_csv(filename)
+    colnames = df.columns.values[1:]
+    #data = df.to_numpy()
+    data = df.values
+    cells = data[:,0]
+    X = data[:,1:].astype(float)
+    return X,cells,colnames
+
+
+def readLabel(filename):
+    df = pd.read_csv(filename)
+    #y = df.to_numpy()
+    y = df.values
+    y = y[:,0]
+    return y
 
 
 
