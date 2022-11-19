@@ -10,10 +10,10 @@ from writeFile import outResults,outSta
 import sys
 from readFile import selRepsample
 
-#dir = '../sigGCN-main/scRNAseq_Benchmark_datasets/Intra-dataset/'
-#resultdir ='../sigGCN-main/scRNAseq_Benchmark_datasets/results/'
-dir = '/scratch/qsu226/FL/Intra-dataset/'
-resultdir = '/scratch/qsu226/FL/results/'
+dir = '../sigGCN-main/scRNAseq_Benchmark_datasets/Intra-dataset/'
+resultdir ='../sigGCN-main/scRNAseq_Benchmark_datasets/results/'
+#dir = '/scratch/qsu226/FL/Intra-dataset/'
+#resultdir = '/scratch/qsu226/FL/results/'
 
 datasetid ={1:'AMB',2:'BaronHuman',3:'BaronMouse',4:'Muraro',5:'Segerstolpe',6:'Xin',7:'TM',8:'zhengsorted'}
 
@@ -21,11 +21,11 @@ modelname = 'svm'
 comms_round = 100
 testratio = 0.2
 
-#num_clients = 5
-#dataset = 'Xin'
+num_clients = 5
+dataset = 'AMB'
 
-dataset = datasetid[int(sys.argv[1])]
-num_clients = int(sys.argv[2])
+#dataset = datasetid[int(sys.argv[1])]
+#num_clients = int(sys.argv[2])
 datasets = get_Datasets()
 
 datafile = dir + datasets[dataset][0]

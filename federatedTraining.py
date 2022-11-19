@@ -48,9 +48,6 @@ def testModel(global_model,local_models,X_test,y_test):
     return global_acc, np.average(np.array(local_accs))
 
 
-# test_pred = global_model.predict(X_train)
-# print(accuracy_score(y_train, test_pred))
-
 
 
 def trainFederated(X_test,y_test,comms_round,global_model,local_models,clients_data):
@@ -100,9 +97,3 @@ def trainFederated(X_test,y_test,comms_round,global_model,local_models,clients_d
         global_model.intercept_ = average_b
 
     return global_model,local_models
-
-        # test global model and print out metrics after each communications round
-        #for (X_test, Y_test) in test_batched:
-        #    global_acc, global_loss = test_model(X_test, Y_test, global_model, comm_round)
-        #test_pred = global_model.predict(X_train)
-        #print(accuracy_score(y_train, test_pred))

@@ -1,7 +1,6 @@
 from sklearn.metrics import accuracy_score,f1_score
 import numpy as np
 
-
 def testSet(global_model,local_models,center_model,X_test,y_test):
     global_acc, global_f1 = testModel(X_test,y_test,global_model)
     local_acc,local_f1 = evalLocals(X_test,y_test,local_models)
