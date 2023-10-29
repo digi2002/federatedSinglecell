@@ -18,16 +18,23 @@ Use tokenizing_scRNAseq_data.ipynb to prepare FedGeneformer data.
 
 ## Run
 * FedSVM
+```
       cd FedSVM
       python main_federatedSVM.py
+```
 * FedACTINN
+```
       cd FedACTINN
       python main_federatedACTINN.py
+```
 * FedXGBoost
+```
       cd FedXGBoost
       python main_xgb.py
+```
 * FedGeneformer
+```
       cd FedGeneformer
       python fl-server.py
       python fl-gene.py {clientId}
-
+```
