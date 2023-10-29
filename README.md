@@ -12,8 +12,11 @@ Four major modules are included:
 * FedGeneformer
 
 ## Prerequisite
+
 NVIDIA GPU + CUDA CuDNN (CPU may be possible with some modifications, but is not inherently supported)
+
 We recommend running this repository using Anaconda. All dependencies for defining the environment are provided in requirements.txt
+
 Use tokenizing_scRNAseq_data.ipynb to prepare FedGeneformer data.
 
 ## Run
