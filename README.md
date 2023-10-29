@@ -4,8 +4,11 @@ This repo contains the source code of the Python package federatedSinglecell. Se
 ## Overview
 Four major modules are included:
 · FedSVM
+
 · FedACTINN
+
 · FedXGBoost
+
 · FedGeneformer
 
 ## Prerequisite
