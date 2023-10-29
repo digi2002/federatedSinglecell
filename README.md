@@ -3,13 +3,13 @@ This repo contains the source code of the Python package federatedSinglecell. Se
 
 ## Overview
 Four major modules are included:
-· FedSVM
+* FedSVM
 
-· FedACTINN
+* FedACTINN
 
-· FedXGBoost
+* FedXGBoost
 
-· FedGeneformer
+* FedGeneformer
 
 ## Prerequisite
 NVIDIA GPU + CUDA CuDNN (CPU may be possible with some modifications, but is not inherently supported)
@@ -17,16 +17,16 @@ We recommend running this repository using Anaconda. All dependencies for defini
 Use tokenizing_scRNAseq_data.ipynb to prepare FedGeneformer data.
 
 ## Run
-· FedSVM
+* FedSVM
       cd FedSVM
       python main_federatedSVM.py
-· FedACTINN
+* FedACTINN
       cd FedACTINN
       python main_federatedACTINN.py
-· FedXGBoost
+* FedXGBoost
       cd FedXGBoost
       python main_xgb.py
-· FedGeneformer
+* FedGeneformer
       cd FedGeneformer
       python fl-server.py
       python fl-gene.py {clientId}
